@@ -354,9 +354,9 @@ def stl_to_greyscale(input_file, data_path):
     file_name_no_ext, _ = os.path.splitext(os.path.basename(input_file))
     side, identifier = file_name_no_ext.split('_', 1)
     output_folder = "Output"
-    converted_dir = os.path.join(data_path, output_folder, "Raw")
-    debug_dir = os.path.join(data_path, output_folder, "Debug")
-    aligned_dir = os.path.join(data_path, output_folder, "Aligned")
+    converted_dir = os.path.join(data_path, output_folder, "Raw", identifier)
+    debug_dir = os.path.join(data_path, output_folder, "Debug", identifier)
+    aligned_dir = os.path.join(data_path, output_folder, "Aligned", identifier)
     # Create output directory if it doesn't exist
     os.makedirs(converted_dir, exist_ok=True)
     os.makedirs(debug_dir, exist_ok=True)
