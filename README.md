@@ -67,7 +67,7 @@ This script processes 3D foot models in STL format and converts them into greysc
 if __name__ == "__main__":
     input_file = r"D:\A\Test\Test1\Input\left_01wangchongguang.stl"
     data_path = r"D:\A\Test\Test1"
-    aligned_image_path = stl_to_greyscale(input_file, data_path)
+    aligned_image_path, _ = stl_to_greyscale(input_file, data_path)
     print(f"Aligned image saved at: {aligned_image_path}")
 ```
 
